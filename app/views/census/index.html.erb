@@ -7,6 +7,12 @@
 
 <p> Hi <%= current_user ? "#{current_user.name}" : "" %></p>
 
+<%if current_user %>
+  <p> You live in <%= current_user.location%>, I see. And you're from <%= current_user.hometown%>.</p>
+<% end %>
+
+<%= "#{@norwegian_born_people_in_user_state[0]["B05006_010E"]} Norwegian-born people live near you." %>
+
 
 
 <p><%= "There are #{@norwegian_born_people_in_ma[0]["B05006_010E"]} Norwegian-born people living in Massachussetts." %></p>
