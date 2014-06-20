@@ -1,0 +1,7 @@
+<p> Hi <%= @current_user != nil ? "#{@current_user.name}" : "" %></p>
+
+<%= link_to "Sign in with Facebook", '/auth/facebook' %>
+
+<p><%= "There are #{@norwegian_born_people_in_ma[0]["B05006_010E"]} Norwegian-born people living in Massachussetts." %></p>
+
+<p><%= "#{@norwegian_born_people_in_boston_area[0]["B05006_010E"]} of them live in the Boston area." %></p>
