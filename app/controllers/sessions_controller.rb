@@ -5,6 +5,11 @@ class SessionsController < ApplicationController
     redirect_to '/census'
   end
 
+  def destroy
+    session[:user_id] = nil
+    redirect_to '/census', notice: 'Signed out!'
+  end
+
   protected
 
   def auth_hash
